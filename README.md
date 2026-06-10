@@ -283,23 +283,27 @@ npm install
 
 # 🔐 Variáveis de Ambiente
 
+Crie um arquivo:
+
+```env
+.env
+```
+
+Exemplo:
+
+```env
 PORT=3001
 
-# Chave secreta para criptografia do JWT
-JWT_SECRET=sua_chave_secreta_jwt_aqui
+DATABASE_URL=
 
-# Integração Stripe (Chave privada de testes)
-STRIPE_SECRET_KEY=sk_test_suachave_stripe_aqui
+JWT_SECRET=
 
-# URL de conexão do MongoDB (NoSQL)
-MONGO_URL=mongodb://localhost:27017/devburger
+STRIPE_SECRET_KEY=
 
-# Credenciais do PostgreSQL (Banco Relacional)
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASS=sua_senha_do_banco
-DB_NAME=devburger
+MONGO_URL=
+```
+
+---
 
 # 🗄️ Configuração do Banco
 
