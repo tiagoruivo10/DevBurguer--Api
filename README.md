@@ -175,25 +175,21 @@ Validações dos dados recebidos pela API.
 
 ---
 
-# 🔐 Sistema de Autenticação
+## 🔐 Sistema de Autenticação
 
-A autenticação utiliza JSON Web Token (JWT).
+A autenticação de rotas protegidas utiliza **JSON Web Token (JWT)**.
 
-Fluxo:
+**Fluxo de Funcionamento:**
+1. O usuário realiza o login com suas credenciais.
+2. A API valida as credenciais criptografadas no banco de dados.
+3. Um **Token JWT** exclusivo é gerado e devolvido.
+4. O cliente passa a enviar esse token no cabeçalho (*header*) das próximas requisições.
+5. O **Middleware** intercepta a chamada, valida a assinatura do token e libera o acesso.
 
-1. Usuário realiza login.
-2. API valida credenciais.
-3. Token JWT é gerado.
-4. Cliente utiliza o token nas próximas requisições.
-5. Middleware valida o acesso.
-
-Benefícios:
-
-* Segurança
-* Escalabilidade
-* Controle de permissões
-
----
+**Principais Benefícios:**
+* **Segurança:** Autenticação robusta sem necessidade de transitar dados sensíveis a cada requisição.
+* **Escalabilidade:** A API se mantém *stateless* (não precisa guardar o estado da sessão no servidor).
+* **Controle de Permissões:** O token é capaz de carregar o perfil do usuário, separando Clientes de Administradores.
 
 # 👨‍💼 Área Administrativa
 
