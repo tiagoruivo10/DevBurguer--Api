@@ -5,7 +5,7 @@ import OrderController from "./app/controllers/OrderController.js";
 import ProductController from "./app/controllers/ProductController.js";
 import SessionController from "./app/controllers/SessionController.js";
 import CreatePaymentIntentController from "./app/controllers/Stripe/CreatePaymentIntentController.js";
-import UserController from "./app/controllers/userController.js";
+import UserController from "./app/controllers/UserController.js";
 import adminMiddleware from "./app/middlewares/admin.js";
 import authMiddleware from "./app/middlewares/auth.js";
 import multerConfig from "./config/multer.cjs";
